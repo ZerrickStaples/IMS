@@ -1,37 +1,13 @@
-Coverage: 34%
-# Project Title
+# Information Management System
 
-One Paragraph of project description goes here
+This project allows users to create, read, update and delete data from a MySQL DB instance
 
 ## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+To run this project, either download the zip file or git clone this repository and open up in an IDE that is compatible with the JDK.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+You will need to have Java installed. Download here: https://www.java.com/en/download/
 
 ## Running the tests
 
@@ -39,31 +15,18 @@ Explain how to run the automated tests for this system. Break down into which te
 
 ### Unit Tests 
 
-Explain what these tests test, why and how to run them
+The unit tests are testing the capablities of Customer, Item and Order controllers to Create, Read, Update and Delete information.
 
 ```
-Give an example
+	@Override
+	public List<Customer> readAll() {
+		List<Customer> customers = customerDAO.readAll();
+		for (Customer customer : customers) {
+			LOGGER.info(customer);
+		}
+		return customers;
+	}
 ```
-
-### Integration Tests 
-Explain what these tests test, why and how to run them
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
 * [Maven](https://maven.apache.org/) - Dependency Management
